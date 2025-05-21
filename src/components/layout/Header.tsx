@@ -14,8 +14,8 @@ const NAV_LINKS: NavLink[] = [
 export function Header() {
 	return (
 		<header className="relative p-gutter pb-0">
-			<nav>
-				<ul className="flex flex-wrap gap-2">
+			<nav className="flex flex-wrap items-center gap-2">
+				<ul className="contents">
 					{NAV_LINKS.map((link) => (
 						<li key={link.link}>
 							<a
