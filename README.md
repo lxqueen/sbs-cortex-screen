@@ -34,5 +34,6 @@ The project code, except where otherwise specified below, is available under the
 
 Exceptions include:
 
+- **Images:** see `assets/images/README.md`.
 - **Fonts:** see `assets/fonts/README.md`.
 - *Swashbucklers by Starlight* and all setting material remains &copy; and &trade; Alexis Queen.
