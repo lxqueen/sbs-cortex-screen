@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -328,6 +331,10 @@ packages:
   chownr@3.0.0:
     resolution: {integrity: sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==}
     engines: {node: '>=18'}
+
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
 
   core-js@3.42.0:
     resolution: {integrity: sha512-Sz4PP4ZA+Rq4II21qkNqOEDTDrCvcANId3xpIgB34NDkWc3UduWj2dqEtN9yZIq8Dk3HyPI33x9sqqU5C8sr0g==}
@@ -743,6 +750,8 @@ snapshots:
   caniuse-lite@1.0.30001718: {}
 
   chownr@3.0.0: {}
+
+  clsx@2.1.1: {}
 
   core-js@3.42.0: {}
 
