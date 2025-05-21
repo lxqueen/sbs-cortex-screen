@@ -1,0 +1,13 @@
+# Build
+*.log*
+node_modules
+dist/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Debris
+.DS_Store
+[Tt]humbs.db
