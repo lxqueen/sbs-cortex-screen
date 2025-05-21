@@ -1,3 +1,4 @@
+import { Backdrop } from "./components/layout/Backdrop";
 import { Header } from "./components/layout/Header";
 import { Page } from "./components/layout/Page";
 
@@ -6,6 +7,7 @@ import "./App.css";
 const App = () => {
 	return (
 		<>
+			<Backdrop />
 			<Header />
 			<Page>
 				<h1>Rsbuild with React</h1>
