@@ -3,9 +3,22 @@
 @import "./assets/fonts/fonts.css";
 
 html {
-	@apply bg-black text-white font-serif;
-
+	background-color: var(--color-black);
+	color: var(--color-white);
 	font-size: max(100%, calc(100vmax / 720 * 16));
+}
+
+html,
+:host {
+	font-family: var(--font-serif);
+	font-weight: var(--font-weight-normal);
+	letter-spacing: var(--tracking-normal);
+	line-height: var(--leading-normal);
+}
+
+::selection {
+	background-color: var(--color-secondary-loud-fill);
+	color: var(--color-secondary-loud-fore);
 }
 
 #root {
