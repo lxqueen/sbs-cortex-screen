@@ -21,7 +21,7 @@ html,
 	color: var(--color-secondary-loud-fore);
 }
 
-#root {
+#app {
 	position: relative;
 	display: flex;
 	flex-direction: column;
