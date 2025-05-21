@@ -1,29 +1,38 @@
-# Rsbuild project
+# SbS Cortex Screen
+A virtual GM screen, intended for Discord screen share.
+
+Built with React & Tailwind v4. This isn't designed to be a full VTT, rather something showing key traits for players when needed + a map of the solar system. Character sheets and other miscellany are tracked elsewhere.
+
+Built for *Swashbucklers by Starlight*, my TTRPG which has started as a kinda-sorta-Cortex-hack and will probably end as some strange abomination.
 
 ## Setup
-
-Install the dependencies:
-
-```bash
-pnpm install
-```
-
-## Get started
-
-Start the dev server:
+This project requires Node v22 LTS or greater, with Corepack enabled — this should also install `pnpm` for you if you don't already have it.
 
 ```bash
-pnpm dev
+corepack enable
+pnpm i
 ```
 
-Build the app for production:
+## Commands
+All commands are run from a terminal at the project root (here):
 
-```bash
-pnpm build
-```
+| Command        | Action                                       |
+| :------------- | :------------------------------------------- |
+| `pnpm build`   | Build your production site to `./dist/`      |
+| `pnpm dev`     | Starts local dev server at `localhost:3000`  |
+| `pnpm lint`    | Lints, formats, and checks with Biome        |
+| `pnpm preview` | Preview your build locally, before deploying |
 
-Preview the production build locally:
+## Useful links
+- [Biome documentation](https://biomejs.dev)
+- [React documentation](https://react.dev)
+- [Rsbuild documentation](https://rsbuild.dev)
+- [Tailwind v4 documentation](https://tailwindcss.com)
 
-```bash
-pnpm preview
-```
+## License
+The project code, except where otherwise specified below, is available under the MIT License. See `LICENSE.txt` in the project root.
+
+Exceptions include:
+
+- **Fonts:** see `assets/fonts/README.md`.
+- *Swashbucklers by Starlight* and all setting material remains &copy; and &trade; Alexis Queen.
