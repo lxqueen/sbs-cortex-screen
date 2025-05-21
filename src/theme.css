@@ -109,4 +109,6 @@
 	--color-danger-loud-fill: var(--color-danger-50);
 	--color-danger-loud-border: var(--color-danger-70);
 	--color-danger-loud-fore: var(--color-white);
+
+	--spacing-gutter: --spacing(4);
 }

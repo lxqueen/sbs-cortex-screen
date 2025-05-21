@@ -7,3 +7,11 @@ html {
 
 	font-size: max(100%, calc(100vmax / 720 * 16));
 }
+
+#root {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	min-height: 100dvh;
+}
