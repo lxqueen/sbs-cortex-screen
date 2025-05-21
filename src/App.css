@@ -1,3 +1,9 @@
 @import "tailwindcss";
 @import "./theme.css";
 @import "./assets/fonts/fonts.css";
+
+html {
+	@apply bg-black text-white font-serif;
+
+	font-size: max(100%, calc(100vmax / 720 * 16));
+}
