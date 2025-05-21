@@ -148,3 +148,28 @@
 	--font-weight-label: var(--font-weight-medium);
 	--font-weight-action: var(--font-weight-semibold);
 }
+
+:root {
+	--hoverable-filter: brightness(115%) contrast(105%);
+	--active-filter: brightness(130%) contrast(110%);
+	--disabled-filter: brightness(65%) contrast(50%);
+}
+
+@utility hoverable {
+	&:hover,
+	&:focus-visible {
+		filter: var(--hoverable-filter);
+	}
+
+	&:active {
+		filter: var(--active-filter);
+	}
+}
+
+@utility disablable {
+	&:disabled,
+	&[aria-disabled="true"] {
+		pointer-events: none;
+		filter: var(--disabled-filter) !important;
+	}
+}

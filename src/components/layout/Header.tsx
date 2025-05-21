@@ -20,7 +20,7 @@ export function Header() {
 						<li key={link.link}>
 							<a
 								className={clsx(
-									"inline-flex items-center px-2 h-8 text-center rounded-sm",
+									"inline-flex items-center px-2 h-8 text-center border rounded-sm hoverable disablable",
 									link.link === "/"
 										? "bg-primary-loud-fill text-primary-loud-fore border-primary-loud-border"
 										: "bg-primary-quiet-fill text-primary-quiet-fore border-primary-quiet-border",
