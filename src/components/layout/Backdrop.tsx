@@ -51,7 +51,7 @@ export function Backdrop() {
 					key={theme.id}
 					className={clsx(
 						"absolute inset-0 w-full h-full object-center object-cover duration-2000",
-						"after:content-[''] after:absolute after:inset-0 after:opacity-50 after:bg-blend-overlay",
+						"after:content-[''] after:absolute after:inset-0 after:opacity-80 after:bg-blend-overlay",
 						{
 							"after:preset-filled-primary-50-950": theme.tint === "primary",
 							"after:preset-filled-secondary-50-950":
