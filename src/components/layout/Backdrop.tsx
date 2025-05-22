@@ -16,9 +16,9 @@ interface BackdropTheme {
 }
 
 const BACKDROP_THEMES: BackdropTheme[] = [
-	{ id: "1", label: "Space", image: ngc7023, tint: "gray" },
-	{ id: "2", label: "Slipstream", image: starTrail, tint: "gray" },
-	{ id: "0", label: "Underneath", image: lightningNighttime, tint: "danger" },
+	{ id: "1", label: "Space", image: ngc7023, tint: "surface" },
+	{ id: "2", label: "Slipstream", image: starTrail, tint: "surface" },
+	{ id: "0", label: "Underneath", image: lightningNighttime, tint: "error" },
 ];
 
 const VALID_THEME_IDS: string[] = BACKDROP_THEMES.map((theme) => theme.id);
@@ -43,7 +43,7 @@ export function Backdrop() {
 
 	return (
 		<div
-			className="fixed inset-0 -z-1 pointer-events-none select-none"
+			className="fixed inset-0 pointer-events-none select-none"
 			aria-hidden="true"
 		>
 			{BACKDROP_THEMES.map((theme) => (
@@ -53,11 +53,14 @@ export function Backdrop() {
 						"absolute inset-0 w-full h-full object-center object-cover duration-2000",
 						"after:content-[''] after:absolute after:inset-0 after:opacity-50 after:bg-blend-overlay",
 						{
-							"after:bg-gray-05": theme.tint === "gray",
-							"after:bg-primary-05": theme.tint === "primary",
-							"after:bg-secondary-05": theme.tint === "secondary",
-							"after:bg-success-05": theme.tint === "success",
-							"after:bg-danger-05": theme.tint === "danger",
+							"after:preset-filled-primary-50-950": theme.tint === "primary",
+							"after:preset-filled-secondary-50-950":
+								theme.tint === "secondary",
+							"after:preset-filled-tertiary-50-950": theme.tint === "tertiary",
+							"after:preset-filled-success-50-950": theme.tint === "success",
+							"after:preset-filled-warning-50-950": theme.tint === "warning",
+							"after:preset-filled-error-50-950": theme.tint === "error",
+							"after:preset-filled-surface-50-950": theme.tint === "surface",
 						},
 						{
 							"opacity-100": backdrop === theme.id,

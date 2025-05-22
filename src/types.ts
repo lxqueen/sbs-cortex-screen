@@ -1,1 +1,9 @@
-export type Tint = "gray" | "primary" | "secondary" | "success" | "danger";
+// Matches Skeleton colors.
+export type Tint =
+	| "primary"
+	| "secondary"
+	| "tertiary"
+	| "success"
+	| "warning"
+	| "error"
+	| "surface";

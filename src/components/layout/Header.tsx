@@ -23,10 +23,8 @@ export function Header() {
 							<NavLink
 								className={({ isActive }) =>
 									clsx(
-										"inline-flex items-center px-2 h-8 text-center border rounded-sm hoverable disablable duration-150",
-										isActive
-											? "bg-primary-loud-fill text-primary-loud-fore border-primary-loud-border"
-											: "bg-primary-quiet-fill text-primary-quiet-fore border-primary-quiet-border",
+										"btn",
+										isActive ? "preset-tonal-primary" : "hover:preset-tonal",
 									)
 								}
 								to={link.link}
