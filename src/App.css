@@ -5,7 +5,7 @@
 @import "./assets/fonts/fonts.css";
 
 html {
-	font-size: max(100%, calc(100vmax / 720 * 16));
+	font-size: max(100%, calc(100vmin / 540 * 16));
 }
 
 #app {
