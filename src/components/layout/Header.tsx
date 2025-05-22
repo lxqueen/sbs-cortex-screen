@@ -21,10 +21,7 @@ function HeaderLink({ link }: HeaderLinkProps) {
 	return (
 		<NavLink
 			className={({ isActive }) =>
-				clsx(
-					"btn",
-					isActive ? "preset-tonal-primary" : "hover:preset-tonal",
-				)
+				clsx("btn", isActive ? "preset-tonal-primary" : "hover:preset-tonal")
 			}
 			to={link.link}
 		>
