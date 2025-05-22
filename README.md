@@ -25,6 +25,10 @@ All commands are run from a terminal at the project root (here):
 
 ## Useful links
 - [Biome documentation](https://biomejs.dev)
+- Nanostores documentation:
+    - [nanostores](https://github.com/nanostores/nanostores)
+    - [@nanostores/persistent](https://github.com/nanostores/react)
+    - [@nanostores/react](https://github.com/nanostores/react)
 - [React documentation](https://react.dev)
 - [Rsbuild documentation](https://rsbuild.dev)
 - [Tailwind v4 documentation](https://tailwindcss.com)

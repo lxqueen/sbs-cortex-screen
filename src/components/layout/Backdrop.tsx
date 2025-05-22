@@ -1,18 +1,15 @@
+import { useStore } from "@nanostores/react";
 import { clsx } from "clsx";
-import { useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
+import { $settings, type ValidBackdropId } from "../../stores/settings";
 import type { Tint } from "../../types";
 
 import lightningNighttime from "../../assets/images/lightning-nighttime-jplenio.jpg";
 import ngc7023 from "../../assets/images/ngc-7023-daniel-cid.jpg";
 import starTrail from "../../assets/images/star-trail-killian-eon.jpg";
 
-/** Needs to be a stringified number between 0-9, so we can convert between hotkeys and back. */
-type ValidThemeId = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "0";
-
 interface BackdropTheme {
-	/** Needs to be a stringified number between 0-9, so we can convert between hotkeys and back. */
-	id: ValidThemeId;
+	id: ValidBackdropId;
 	label: string;
 	image?: string;
 	tint: Tint;
@@ -29,7 +26,7 @@ const VALID_THEME_IDS: string[] = BACKDROP_THEMES.map((theme) => theme.id);
 const HOTKEYS = BACKDROP_THEMES.map((theme) => `alt+${theme.id}`);
 
 export function Backdrop() {
-	const [activeTheme, setActiveTheme] = useState<ValidThemeId>("1");
+	const { backdrop } = useStore($settings);
 
 	useHotkeys(HOTKEYS, (_event, handler) => {
 		if (handler.keys) {
@@ -37,7 +34,7 @@ export function Backdrop() {
 				const currentKey = handler.keys[i];
 
 				if (VALID_THEME_IDS.includes(currentKey)) {
-					setActiveTheme(currentKey as ValidThemeId);
+					$settings.setKey("backdrop", currentKey as ValidBackdropId);
 					console.log("Set backdrop theme to %s", currentKey);
 				}
 			}
@@ -63,8 +60,8 @@ export function Backdrop() {
 							"after:bg-danger-05": theme.tint === "danger",
 						},
 						{
-							"opacity-100": activeTheme === theme.id,
-							"opacity-0": activeTheme !== theme.id,
+							"opacity-100": backdrop === theme.id,
+							"opacity-0": backdrop !== theme.id,
 						},
 					)}
 				>
