@@ -11,6 +11,7 @@ const NAV_LINKS: Link[] = [
 	{ name: "Scene", link: "/scene" },
 	{ name: "Map", link: "/map" },
 	{ name: "Rules", link: "/rules" },
+	{ name: "Notes", link: "/notes" },
 ];
 
 interface HeaderLinkProps {
