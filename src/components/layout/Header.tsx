@@ -7,7 +7,8 @@ interface Link {
 }
 
 const NAV_LINKS: Link[] = [
-	{ name: "Scene", link: "/" },
+	{ name: "Crew", link: "/" },
+	{ name: "Scene", link: "/scene" },
 	{ name: "Map", link: "/map" },
 	{ name: "Rules", link: "/rules" },
 ];
