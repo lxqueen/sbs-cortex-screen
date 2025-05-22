@@ -13,6 +13,26 @@ const NAV_LINKS: Link[] = [
 	{ name: "Rules", link: "/rules" },
 ];
 
+interface HeaderLinkProps {
+	link: Link;
+}
+
+function HeaderLink({ link }: HeaderLinkProps) {
+	return (
+		<NavLink
+			className={({ isActive }) =>
+				clsx(
+					"btn",
+					isActive ? "preset-tonal-primary" : "hover:preset-tonal",
+				)
+			}
+			to={link.link}
+		>
+			{link.name}
+		</NavLink>
+	);
+}
+
 export function Header() {
 	return (
 		<header className="relative p-gutter pb-0">
@@ -20,17 +40,7 @@ export function Header() {
 				<ul className="contents">
 					{NAV_LINKS.map((link) => (
 						<li key={link.name}>
-							<NavLink
-								className={({ isActive }) =>
-									clsx(
-										"btn",
-										isActive ? "preset-tonal-primary" : "hover:preset-tonal",
-									)
-								}
-								to={link.link}
-							>
-								{link.name}
-							</NavLink>
+							<HeaderLink link={link} />
 						</li>
 					))}
 				</ul>
