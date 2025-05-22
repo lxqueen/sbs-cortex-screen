@@ -18,7 +18,7 @@ export function Header() {
 			<nav className="flex flex-wrap items-center gap-2">
 				<ul className="contents">
 					{NAV_LINKS.map((link) => (
-						<li key={link.link}>
+						<li key={link.name}>
 							<NavLink
 								className={({ isActive }) =>
 									clsx(
